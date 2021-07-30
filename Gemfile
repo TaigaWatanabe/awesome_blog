@@ -9,15 +9,17 @@ gem 'faker', '~> 1.6', '>= 1.6.3'
 gem 'will_paginate', '~> 3.2', '~> 3.2.1'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
 gem 'font-awesome-sass'
-group :production do
-gem 'pg'
-end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.4'
 # Use mysql as the database for Active Record
 group :development do
- gem 'mysql2'
+ gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 end
+
+group :production do
+  gem 'pg'
+end
+
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
