@@ -20,7 +20,8 @@ production:
   username: twitter_clone
   password: <%= ENV['twitter_clone_DATABASE_PASSWORD'] %>
 
-Default: &default
+production:
+  <<: *default  
   Adapter: postgresql
   Encoding: unicode
   Pool: 5
