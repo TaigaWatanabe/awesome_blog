@@ -1,0 +1,26 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password: password
+  host: <%= ENV['DB_HOST'] %>
+
+development:
+  <<: *default
+  database: twitter_clone_development
+
+test:
+  <<: *default
+  database: twitter_clone_test
+
+production:
+  <<: *default
+  database: twitter_clone_production
+  username: twitter_clone
+  password: <%= ENV['twitter_clone_DATABASE_PASSWORD'] %>
+
+Default: &default
+  Adapter: postgresql
+  Encoding: unicode
+  Pool: 5
