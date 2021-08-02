@@ -15,12 +15,6 @@ test:
   database: twitter_clone_test
 
 production:
-  <<: *default
-  database: twitter_clone_production
-  username: twitter_clone
-  password: <%= ENV['twitter_clone_DATABASE_PASSWORD'] %>
-
-production:
   <<: *default  
   Adapter: postgresql
   Encoding: unicode
